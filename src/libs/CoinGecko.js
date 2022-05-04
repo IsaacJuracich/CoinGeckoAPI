@@ -21,12 +21,12 @@ class CoinGecko {
   async price(coin, currency) {
     return new Promise(async (resolve, reject) => {
       request.get(
-        url + '/simple/price?ids=' + coin + '&vs_currencies=' + currency
-      ),
+        url + '/simple/price?ids=' + coin + '&vs_currencies=' + currency,
         async (error, response, body) => {
           if (error) return resolve(error);
           return resolve(options.returnParsed ? JSON.parse(body) : body);
-        };
+        }
+      );
     });
   }
 }
