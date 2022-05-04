@@ -1,0 +1,17 @@
+{
+  "name": "coingeckoapi",
+  "version": "1.0.0",
+  "description": "Wrapper for CoinGecko's API",
+  "main": "src/index.js",
+  "scripts": {
+    "run": "nodemon src/index.js",
+    "test": "nodemon src/test/index.js",
+    "info": "echo Made From: https://www.coingecko.com/en/api/documentation"
+  },
+  "author": "Isaac Juracich",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^2.0.16",
+    "requests": "^0.3.0"
+  }
+}
