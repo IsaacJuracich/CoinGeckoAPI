@@ -29,5 +29,17 @@ class CoinGecko {
       );
     });
   }
+
+  async supportedCurrencies() {
+    return new Promise(async (resolve, reject) => {
+      request.get(
+        url + '/simple/supported_vs_currencies',
+        async (error, response, body) => {
+          if (error) return resolve(error);
+          return resolve(options.returnParsed ? JSON.parse(body) : body);
+        }
+      );
+    });
+  }
 }
 module.exports = exports = CoinGecko;
